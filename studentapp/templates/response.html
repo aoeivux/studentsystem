@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>学生信息管理系统</title>
+    <link rel="stylesheet" href="../../static/css/studentMain.css">
+</head>
+
+<body>
+    <div id="container">
+        <div class="top">
+            欢迎进入学生管理信息平台
+        </div>
+        <div class="nav">
+        </div>
+        <div class="conter">
+            <div class="conter_up">
+                学员信息列表
+            </div>
+            <div class="conter_middle">
+                <table cellspacing="0" cellpadding="0">
+                    <thead>
+                        <tr>
+                            <th>序号</th>
+                            <th>姓名</th>
+                            <th>学号</th>
+                            <th>家庭地址</th>
+                            <th>出生年月</th>
+                            <th>性别</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {%for i in resp%}
+                        <tr>
+                            <td>{{i.id}}</td>
+                            <td>{{i.name}}</td>
+                            <td>{{i.number}}</td>
+                            <td>{{i.address}}</td>
+                            <td>{{i.date}}</td>
+                            <td>{{i.sex}}</td>
+                        </tr>
+                        {%endfor%}
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="conter_down">
+                <span>共5页</span>
+                <input type="button" name="" id="" value="上一页" />
+                <select name="">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+					</select>
+                <input type="button" name="" id="" value="下一页" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
